@@ -1,7 +1,7 @@
 {
-  "name": "capacitor-razorpay",
+  "name": "@horecah/capacitor-razorpay",
   "version": "1.2.0",
-  "description": "This plugin is used for integration related to ionic Capacitor and its latest versions.",
+  "description": "A modified version of the Razorpay Capacitor plugin.",
   "main": "dist/plugin.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -14,7 +14,7 @@
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
-  "author": "sachin.nautiyal@razorpay.com",
+  "author": "akashdas98",
   "license": "MIT",
   "devDependencies": {
     "@capacitor/android": "^6.0.0",
@@ -23,12 +23,13 @@
     "@ionic/prettier-config": "^1.0.0",
     "@ionic/swiftlint-config": "^1.0.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
+    "@types/node": "^20.14.11",
     "prettier": "^2.0.5",
     "prettier-plugin-java": "^0.8.0",
     "rimraf": "^3.0.0",
     "rollup": "^2.21.0",
     "swiftlint": "^1.0.1",
-    "typescript": "~3.8.3"
+    "typescript": "^5.5.3"
   },
   "peerDependencies": {
     "@capacitor/core": "^6.0.0"

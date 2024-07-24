@@ -1,5 +1,10 @@
-import { registerPlugin, WebPlugin } from '@capacitor/core';
-export class CheckoutWeb extends WebPlugin {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var core = require('@capacitor/core');
+
+class CheckoutWeb extends core.WebPlugin {
     constructor() {
         super({
             name: 'Checkout',
@@ -62,9 +67,16 @@ export class CheckoutWeb extends WebPlugin {
         });
     }
 }
-const Checkout = registerPlugin('Checkout', {
-    web: () => import('./web').then(m => new m.CheckoutWeb())
+const Checkout = core.registerPlugin('Checkout', {
+    web: () => Promise.resolve().then(function () { return web; }).then(m => new m.CheckoutWeb())
 });
-export * from './definitions';
-export { Checkout };
-//# sourceMappingURL=web.js.map
+
+var web = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    CheckoutWeb: CheckoutWeb,
+    Checkout: Checkout
+});
+
+exports.Checkout = Checkout;
+exports.CheckoutWeb = CheckoutWeb;
+//# sourceMappingURL=plugin.cjs.js.map

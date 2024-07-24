@@ -1,5 +1,5 @@
 import { WebPlugin } from '@capacitor/core';
-import type { CheckoutPlugin } from './definitions';
+import type { CheckoutOptions, CheckoutPlugin } from './definitions';
 export declare class CheckoutWeb extends WebPlugin implements CheckoutPlugin {
     constructor();
     echo(options: {
@@ -7,10 +7,7 @@ export declare class CheckoutWeb extends WebPlugin implements CheckoutPlugin {
     }): Promise<{
         value: string;
     }>;
-    open(options: {
-        key: string;
-        amount: string;
-    }): Promise<{
+    open(options: CheckoutOptions): Promise<{
         response: string;
     }>;
 }
